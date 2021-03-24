@@ -141,4 +141,3 @@ ETIQUETAS EN GIT
 --> git tag "name-etiqueta"
 --> git tag --> muestra el nombre de etiqueta
 --> ELIMINAR LAS ETIQUETAS 
-	--> 
