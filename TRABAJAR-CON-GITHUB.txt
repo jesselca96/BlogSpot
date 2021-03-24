@@ -1,0 +1,19 @@
+- CREAR REPOSITORIO
+- CONFIGURAR REPOSITORIO DARLE NOMBRE, AÑADIR UN README
+- FINALIZAR
+
+COPIAR EL HTTP Y PEGARLO EN EL GITBASH
+EJ: https://github.com/jesselca96/Hyperblog.git
+--> git remote add origin https://github.com/jesselca96/Hyperblog.git
+
+ver los que llevamos hasta el momento
+--> git remote
+
+ver lo que lelvamos hasta el momento pero en verbal 
+--> git remote -v 
+
+Subir nuestros archivos local de la rama master a remoto 
+--> git push origin master
+
+Si sale erro hay que traernos todo desde el origin
+--> git pull origin master
