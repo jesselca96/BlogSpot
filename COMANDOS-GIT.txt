@@ -104,6 +104,18 @@ COMO VER LOS COMIT EN ARDEN(ANTERIOR, ETC)
 VER PUNTEROS EN LOS QUE ESTAMOS PARADOS
 --> git log --oneline --decorate
 
+ENVIAR CAMBIOS A UN SERVIDOR REMOTO
+--> git push
+
+TRAER LAS ACTUALIZACIONES DE UN SERVIDOR REMOTO
+pero no lo copia en tus archivos
+--> git fetch
+Para fusionarlo hacemos merge
+--> git merge
+
+TRAER LAS ACTUALIZACIONES Y COPIARLAS
+--> git pull
+
 COMO CREAR, MODIFICAR Y ELIMINAR BRANCHES (RAMAS)
 VER LISTA DE RAMAS
 --> git branch
@@ -112,6 +124,9 @@ CREAR RAMA
 --> git branch "name-rama"
 
 CAMBIAR ENTRE RAMAS 
+Este comando es una fusión entre “git branch” y “git checkout”, y su funcionamiento es el siguiente:
+- Crea una rama llamada “name-rama”
+- Hace un checkout de la rama “name-rama”
 --> git checkout "name-rama"
 
 CREAR RAMA Y CAMBIARSE A ELLA
