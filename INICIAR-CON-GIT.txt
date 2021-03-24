@@ -1,0 +1,127 @@
+PASOS PARA INCIAR CON GIT
+
+REVISAR LA VERSION INSTALADA 
+--> git --version
+
+REGISTRARSE CON EL CORREO 
+--> git config --global user.email "correo"
+
+REGISTRARSE CON EL USUARIO DE ENTORNO
+-->	git config --global user.name "user"
+
+CONFIGURACION DE COLORES PARA RAMAS
+--> git config --global color.ui true
+
+VER LOS USUARIOS QUE ESTAN REGISTRADOS EN GIT
+-->  git config user.name && git config user.email
+
+CREAR REPOSITORIO
+--> git init "nombre del repositorio"
+
+BORRAR DIRECTORIO GIT
+--> rm -rf .git
+
+MOSTRAR EL ESTADO 
+--> git status     -> muestra los archivos que estan en el working directo
+
+AGREGAR ARCHIVOS AL GIT
+--> git add "nombrefile"
+
+BORRAR O DESHACER ARCHIVOS AGREGADOS
+--> git rm --cached "nombrefile"
+
+QUITAR ARCHIVOS DEL STATE 
+--> git reset carpeta/nombrefile.tipofile
+
+AGREGAR ARCHIVOS QUE ESTEN LISTOS A GIT DE UNA SOLA VEZ
+--> git add -A
+
+AGREGAR ARCHIVOS DEL MISMO TIPO A GIT DE UNA SOLA VEZ
+--> git add carpeta/*.css
+
+BORRAR DEL WORKSTATION POR COMPLETO
+--> git rm -f "namefile"
+
+COMPROMETER LOS CAMBIO AL GIT 
+--> git commit
+	--> -m "mensaje"
+	ej: git commit -m "Inicializar nuestro landing"
+
+MODIFICAR LA CONFIRMACION MAS RECIENTE
+--> git commit --amend
+	
+MOSTRAR LOS COMMITT HECHOS 
+--> git log
+
+DESHACER LOS CAMBIOS QUE FUERON HECHO EN ARCHIVOS QUE NO ESTEN EN EL STATING
+--> git checkout -- namefile.tipofile
+
+RESETEAR ARCHIVOS QUE YA FUEERON MANDADOS AL STATING AREA
+--> git reset HEAD namefile.tipofile
+	--> devuele al estado el ultimo archivos afectado por un git add 
+	--> retrocede un commit y ahi deshacer cambion que ya no esten en stating
+		--> git checkout -- namefile.tipofile
+
+MOSTRAR ID DE LOS COMMIT SIN HASH
+--> git log --oneline
+	--> concatenarlo
+		--> git log --oneline | cat
+		
+COMO ELIMINAR UN COMMIT (solo para local) No es seguro para grupos
+Y DEJAR LOS CAMBIOS EN EL STATE
+--> git reset "id.commit"
+
+ELIMINAR COMMIT CON HARD Y VACIAR STATES 
+--> git reset --hard "id.comit"
+
+ELIMINAR COMMIT CON SOFT Y DEJAR STATES
+--> git reset --soft "id.comit"
+
+VER DIFERENCIAS ENTRE COMMIT
+--> git diff "id.comit" "id.commit"
+
+COMO REVERTIR UN COMMIT
+--> git revert "id.commit"
+o --> git revert HEAD~1 (numero del comit)
+
+ELIMINAR VARIOS COMMIT DE UNA SOLA ATACADA
+--> git revert --no-commit HEAD~1
+Luego hacer reversion
+	--> git revert --continue
+
+COMO VER LOS COMIT EN ARDEN(ANTERIOR, ETC)
+--> git diff HEAD~1 HEAD (1 indica el numero de comit anterior)
+
+VER PUNTEROS EN LOS QUE ESTAMOS PARADOS
+--> git log --oneline --decorate
+
+COMO CREAR, MODIFICAR Y ELIMINAR BRANCHES (RAMAS)
+VER LISTA DE RAMAS
+--> git branch
+
+CREAR RAMA 
+--> git branch "name-rama"
+
+CAMBIAR ENTRE RAMAS 
+--> git checkout "name-rama"
+
+CREAR RAMA Y CAMBIARSE A ELLA
+--> git checkout -b "name-rama"
+
+CAMBIAR NOMBRE DE UNA RAMA 
+--> git branch -m "name-rama-vieja" "name-rama-nueva"
+
+ELIMINAR RAMA
+--> git branch -d "name-rama"
+
+ELIMINAR RAMA A LA FUERZA 
+--> git branch -D "name-rama"
+
+VER PUNTEROS DE TODAS LAS RAMAS 
+--> git log --oneline --decorate --all --graph
+
+COMO FUCIONAR LAS RAMAS 
+--> git checkout master
+--> git merge "name.rama"
+	LUEGO ELIMIANR LA RAMA SI NO LA NECESITAMOS
+	--> git branch -d "name-rama"
