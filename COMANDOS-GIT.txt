@@ -77,6 +77,7 @@ MOSTRAR ID DE LOS COMMIT SIN HASH
 		
 COMO ELIMINAR UN COMMIT (solo para local) No es seguro para grupos
 Y DEJAR LOS CAMBIOS EN EL STATE
+BORRA TODO LO QUE HICIMOS ANTES. CUIDADO
 --> git reset "id.commit"
 
 ELIMINAR COMMIT CON HARD Y VACIAR STATES 
@@ -131,8 +132,9 @@ VER PUNTEROS DE TODAS LAS RAMAS
 COMO FUCIONAR LAS RAMAS 
 --> git checkout master
 --> git merge "name.rama"
-	LUEGO ELIMIANR LA RAMA SI NO LA NECESITAMOS
+	LUEGO ELIMINAR LA RAMA SI NO LA NECESITAMOS
 	--> git branch -d "name-rama"
+	--> 
 	
 MERGE CON CONLFICTOS
 --> cuando se tiene archivos en conflictos se debe resolver de forma manual
