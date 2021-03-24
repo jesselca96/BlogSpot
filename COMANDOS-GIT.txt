@@ -144,6 +144,15 @@ ELIMINAR RAMA A LA FUERZA
 VER PUNTEROS DE TODAS LAS RAMAS 
 --> git log --oneline --decorate --all --graph
 
+COMO VER LAS RAMAS QUE EXISTEN Y CUALES HAN SIDO SU HISTORIA
+--> git show-branch --all
+
+ABRIR EN SOFTWARA DE MANERA ULTRA VISUAL
+--> gitk
+
+CONFIGURAR ALIAS PARA LOS CODIGOS
+--> alias arbolito="git log --oneline --decorate --all --graph"
+
 COMO FUCIONAR LAS RAMAS 
 --> git checkout master TENEMOS QUE POSICIONARNOS EN NUESTRA RAMA MASTER 
 --> git merge "name.rama"
@@ -157,6 +166,19 @@ MERGE CON CONLFICTOS
 		--> git commit -am "Se solucionnal las ramas"
 
 ETIQUETAS EN GIT
---> git tag "name-etiqueta"
+AGREGARLAS
+--> git tag -a v0.1 -m "mensaje"
 --> git tag --> muestra el nombre de etiqueta
---> ELIMINAR LAS ETIQUETAS 
+	TRAER TODO DE TU REPOSITORIO
+	--> git pull origin master
+	SUBIR TU TAG A TU REPOSITORIO
+	--> git push origin --tags
+	
+ELIMINAR LAS ETIQUETAS 
+--> git tag -d "name-etiqueta"
+
+ELIMINAR LAS ETIQUETAS DE MANERA ESPECIAL 
+--> git push origin :refs/tags/dormido
+
+COMO ENVIAR DIFERENTES RAMAS A TU REPOSITORIO
+
