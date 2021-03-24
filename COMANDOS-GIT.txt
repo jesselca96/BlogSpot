@@ -95,7 +95,7 @@ o --> git revert HEAD~1 (numero del comit)
 
 ELIMINAR VARIOS COMMIT DE UNA SOLA ATACADA
 --> git revert --no-commit HEAD~1
-Luego hacer reversion
+Luego hacer reversion para continuar
 	--> git revert --continue
 
 COMO VER LOS COMIT EN ARDEN(ANTERIOR, ETC)
