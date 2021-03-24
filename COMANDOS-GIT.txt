@@ -145,14 +145,16 @@ VER PUNTEROS DE TODAS LAS RAMAS
 --> git log --oneline --decorate --all --graph
 
 COMO FUCIONAR LAS RAMAS 
---> git checkout master
+--> git checkout master TENEMOS QUE POSICIONARNOS EN NUESTRA RAMA MASTER 
 --> git merge "name.rama"
-	LUEGO ELIMINAR LA RAMA SI NO LA NECESITAMOS
+	LUEGO ELIMINAR LA RAMA SI NO LA NECESITAMOS OPCIONAL
 	--> git branch -d "name-rama"
-	--> 
 	
 MERGE CON CONLFICTOS
 --> cuando se tiene archivos en conflictos se debe resolver de forma manual
+	--> Se deben resolver de forma manual, o escojer cual se deber quedar
+	UNA VEZ SE HACEN LOS CAMBIOS SE TIENEN QUE AGREGAR
+		--> git commit -am "Se solucionnal las ramas"
 
 ETIQUETAS EN GIT
 --> git tag "name-etiqueta"
