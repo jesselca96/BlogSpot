@@ -29,6 +29,7 @@ AGREGAR ARCHIVOS AL GIT
 
 BORRAR O DESHACER ARCHIVOS AGREGADOS
 --> git rm --cached "nombrefile"
+	--> --cached --> Significa que esta en memoria ram, no guardado en la base de datos en sus cambios, basicamente le quitas el add 
 
 QUITAR ARCHIVOS DEL STATE 
 --> git reset carpeta/nombrefile.tipofile
@@ -45,11 +46,18 @@ BORRAR DEL WORKSTATION POR COMPLETO
 COMPROMETER LOS CAMBIO AL GIT 
 --> git commit
 	--> -m "mensaje"
-	ej: git commit -m "Inicializar nuestro landing"
+	ej: git commit -m "Cualquier mensaje"
 
+ABRIR ARCHIVOS DIRECTO DESDE EL GITBASH
+--> code "namefile.tipofile"
+	--> Automaticamente se abre con visual studio dicho archivo 
+	
 MODIFICAR LA CONFIRMACION MAS RECIENTE
 --> git commit --amend
 	
+MOSTRAR LAS DIFERENCIAS ENTRE EL ANTEPENULTIMO ARCHIVO Y EL ULTIMO
+--> git show "namefile.tipofile"
+
 MOSTRAR LOS COMMITT HECHOS 
 --> git log
 
