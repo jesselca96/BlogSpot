@@ -1,0 +1,12 @@
+SE REGISTRA UN NUEVO USUARIO PARA TRABAJAR
+
+-- INGRESAMOS A NUESTRO GITHUB Y TRAEMOS EL LINK DEL REPOSITORIO
+CON HTTP PORQUE AUN NO HEMOS CONFIGURADO NUESTRA SSH
+
+UBICAMOS EN NUESTRA CARPETA DONDE QUEREMOS INICIAR
+--> git clone https://github.com/jesselca96/BlogSpot.git
+
+No pide contraseña por ser un repo publico
+
+ver todo los archivos
+--> ls -al
