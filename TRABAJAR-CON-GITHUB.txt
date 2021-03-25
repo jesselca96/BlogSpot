@@ -15,5 +15,31 @@ ver lo que lelvamos hasta el momento pero en verbal
 Subir nuestros archivos local de la rama master a remoto 
 --> git push origin master
 
-Si sale erro hay que traernos todo desde el origin
+Si sale error hay que traernos todo desde el origin
 --> git pull origin master
+
+PARA SSH
+DEBEMOS COPIAR NUESTRA LLAVE PUBLICA Y PEGARLA EN LA CONFIGURACION DE NUESTR GITHUB
+---> GITHUB - CONFIGURACION- SSH Y LOGIN
+	--> COPIAR EL HTTP Y PEGARLO EN EL GITBASH
+			EJ: git@github.com:jesselca96/BlogSpot.git
+		--> git remote add origin git@github.com:jesselca96/BlogSpot.git
+		
+		SALDRA MENSAJES DE CONFIRMACION LE DAREMOS "YES"
+		--> yes <-- esto escribir en consola
+		
+		ver los que llevamos hasta el momento
+			--> git remote
+
+		ver lo que lelvamos hasta el momento pero en verbal 
+			--> git remote -v 
+
+		Subir nuestros archivos local de la rama master a remoto 
+			--> git push origin master
+		
+		Si sale error hay que traernos todo desde el origin
+			--> git pull origin master
+		
+		CONFLICTOS CON LAS RAMAS 
+		The “fatal: refusing to merge unrelated histories”
+			--> git pull origin master --allow-unrelated-histories

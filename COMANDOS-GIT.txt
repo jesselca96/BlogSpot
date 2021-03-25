@@ -159,6 +159,10 @@ COMO FUCIONAR LAS RAMAS
 	LUEGO ELIMINAR LA RAMA SI NO LA NECESITAMOS OPCIONAL
 	--> git branch -d "name-rama"
 	
+CONFLICTOS CON LAS RAMAS 
+The “fatal: refusing to merge unrelated histories”
+--> git pull origin master --allow-unrelated-histories
+
 MERGE CON CONLFICTOS
 --> cuando se tiene archivos en conflictos se debe resolver de forma manual
 	--> Se deben resolver de forma manual, o escojer cual se deber quedar
@@ -181,4 +185,6 @@ ELIMINAR LAS ETIQUETAS DE MANERA ESPECIAL
 --> git push origin :refs/tags/dormido
 
 COMO ENVIAR DIFERENTES RAMAS A TU REPOSITORIO
-
+--> git push origin header
+--> git push origin footer
+	--> ej: git push origin "namerama"
