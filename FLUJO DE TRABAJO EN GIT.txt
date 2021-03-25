@@ -10,3 +10,37 @@ No pide contraseña por ser un repo publico
 
 ver todo los archivos
 --> ls -al
+
+--modificar algun archivo de los que estan 
+
+Si el archivo esta trackeado
+--> git commit -am "mi primer commit, esta emociionado"
+
+Traemos lo que estan en internet
+--> git pull origin master
+
+ver las ramas que traemos
+--> git branch
+
+subir mi archivo modificado
+--> git push origin master
+	--> te va pedir contraseña 
+	--> no te va dejar entrar
+
+AGREGAR USUARIOS A TU REPO 
+--> Nos dirijimos a los ajustes de nuestro repo 
+	--> dirijo a colaboradores
+		--> Ingreso el email 
+	
+	--> ingresa por username, si no le das email 
+		--> ingresa su userid
+YA TIENE ACCESO AL REPO
+
+--> git status y enviar cambios al servidor
+--> git pull origin master 
+--> git push origin master
+
+ACTUALIZAR REPOSITORIO DEL DUEÑOO
+--> git pull origin master 
+	--> ver los cambios que hizo el colaborador
+		--> git log --stat
