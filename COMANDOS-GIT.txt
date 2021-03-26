@@ -188,3 +188,36 @@ COMO ENVIAR DIFERENTES RAMAS A TU REPOSITORIO
 --> git push origin header
 --> git push origin footer
 	--> ej: git push origin "namerama"
+
+USO DEL GIT STASH
+guarda el trabajo actual del Staging en una lista diseñada para ser temporal llamada Stash, para que pueda ser recuperado en el futuro
+--> git stash 
+
+PONER UN MENSAJE EN EL STASH
+--> git stash save "mensaje identificador del elemento del stashed"
+
+OBTENER ELEMENTOS DEL STASH 
+METODO POP: recupera y saca de la lista el ultimo estado del stashed y lo inserta en el staging area 
+--> git stash pop
+	--> APLICACR CAMBIOS DE UN STASH ESPECIFICO
+		--> git stash pop stash@{<num_stash>}
+	
+	-->RETOMAR LOS CAMBIOS DE UNA POSICION ESPECIFICA DEL STASH
+		--> git stash apply stash@{<num_stash>}
+	-->OBTENER EL <num_stast>
+		--> git stash list
+
+CREAR RAMA CON EL STASH
+--> git stash branch <namerama>
+
+CREAR RAMA Y USAR UN STASH ESPECIFICO
+--> git stash branch nombre_de_rama stash@{<num_stash>}
+
+ELIMINAR ELEMENTOS DEL STASH
+--> git stash drop
+
+ELIMINAR ELEMENTO DEL STASH CON EL INDICE
+--> git stash drop stash@{<num_stash>}
+
+ELIMINAR TODOS LOS ELEMENTOS DEL STASH
+--> git stash clear
