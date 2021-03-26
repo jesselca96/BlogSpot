@@ -76,17 +76,7 @@ MOSTRAR ID DE LOS COMMIT SIN HASH
 		--> concatenarlo
 			--> git log --oneline | cat
 		
-COMO ELIMINAR UN COMMIT (solo para local) No es seguro para grupos
-Y DEJAR LOS CAMBIOS EN EL STATE
-BORRA TODO LO QUE HICIMOS ANTES. CUIDADO
-	--> git reset "id.commit"
-
-ELIMINAR COMMIT CON HARD Y VACIAR STATES 
-	--> git reset --hard "id.comit"
-
-ELIMINAR COMMIT CON SOFT Y DEJAR STATES
-	--> git reset --soft "id.comit"
-
+USO DE COMMIT ------------------------------------------------------------------------------------------------------------------------------------------
 VER DIFERENCIAS ENTRE COMMIT
 	--> git diff "id.comit" "id.commit"
 
@@ -257,4 +247,27 @@ USO DE CHERRY-PICK -------------------------------------------------------------
 		HACER PULL Y LUEGO COMMIT AL MASTER 
 			--> git pull origin master
 				git push origin master 
-			
+
+RECONSTRUIR COMMIT EN GIT CON AMMEND -------------------------------------------------------------------------------------------------------------------------
+MODIFICAR LOS ARCHIVOS QUE SE TENGAN QUE MODIFICAR DESDE LA RAMA MASTER 
+
+HACER COMMIT DE LOSS CAMBIOS 
+	--> git commit -am "Mensaje"
+
+REMENDAR LOS CAMBIOS 
+	--> git commit -am "Mensaje" --amend 
+
+USO DE GIT RESET Y GIT REFLOG -- USESE EN CASO DE EMERGENCIAA ------------------------------------------------------------------------------------------------
+UNA VEZ SE QUIERE VOLVER A SU ESTRUCTURA COMO ANTES 
+USAR GIT REFLOG 
+	--> git reflog
+	ESCOJER EL ID DEL HEAD{#}
+	eff544f HEAD@{68}: commit: Se modifico el archvo GITHUB
+	--> eje: HEAD@{68}
+		--> VOLVER A SU RAMA MASTER 
+			TIPOS DE RESET 
+			HARD: Perderá todo lo que se encuentra en staging y en el Working directory y se moverá el head al commit eff544f
+				--> git reset --hard eff544f 
+			SOFT: Te recuperará todos los cambios que tengas diferentes al commit eff544f, los agregará al staging area y moverá el head al commit eff544f 
+				-->git reset --soft eff544f
+	
