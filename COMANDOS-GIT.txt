@@ -270,4 +270,23 @@ USAR GIT REFLOG
 				--> git reset --hard eff544f 
 			SOFT: Te recuperará todos los cambios que tengas diferentes al commit eff544f, los agregará al staging area y moverá el head al commit eff544f 
 				-->git reset --soft eff544f
+
+USO DE GIT GREP Y GIT LOG ------------------------------------------------------------------------------------------------------------------------------------
+USAR CUALQUIER PALABRA PARA BUSCAR 
+EJ: use la palabra color
+	--> git grep color
 	
+CONTAR CUANTAS VECES SE USA LA PALABRA COLOR
+	--> git grep -c color 
+
+EN QUE LINEAS SE USA LA PALABRA COLOR 
+	--> git grep -n color
+	
+CUANTAS VECES SE USO LA ETIQUETA <P>
+	--> git grep -c “<p>”
+
+CUANTAS VECES SE USO LA PALABRA CABECERA EN TODOS LOS COMMIT 
+	--> git log -S “cabecera”
+
+GREP -–> para los archivos
+LOG  --> para los commits.
