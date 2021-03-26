@@ -15,5 +15,7 @@ Este es un curso tomado de platzi.
 * Incluye ejemplos en Windows, Linux y Mac
 * Disponible para todas las edades
 * Modificado por le increible jesselca96, para poner en practica el comando cherry-pick
+*No se que poner asi que ff
+*Disponible para mayores de 14
 
 Y como un amable recordatorio: **Este readme.md es un chiste**.  Diseñado para el ejemplo. Si llegas acá NO TE LO TOMES EN SERIO y mejor ve [**a ver el curso**](https://platzi.com/cursos/git-github/ "a ver el curso").
