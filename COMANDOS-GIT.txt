@@ -1,206 +1,208 @@
-PASOS PARA INCIAR CON GIT
+PASOS PARA INICIAR CON GIT --------------------------------------------------------------------------------------------------------------------------
 
 REVISAR LA VERSION INSTALADA 
---> git --version
+	--> git --version
 
 REGISTRARSE CON EL CORREO 
---> git config --global user.email "correo"
+	--> git config --global user.email "correo"
 
 REGISTRARSE CON EL USUARIO DE ENTORNO
--->	git config --global user.name "user"
+	-->	git config --global user.name "user"
 
 CONFIGURACION DE COLORES PARA RAMAS
---> git config --global color.ui true
+	--> git config --global color.ui true
 
 VER LOS USUARIOS QUE ESTAN REGISTRADOS EN GIT
--->  git config user.name && git config user.email
+	-->  git config user.name && git config user.email
 
-CREAR REPOSITORIO
---> git init "nombre del repositorio"
+CREAR REPOSITORIO -----------------------------------------------------------------------------------------------------------------------------------------
+	--> git init "nombre del repositorio"
 
 BORRAR DIRECTORIO GIT
---> rm -rf .git
+	--> rm -rf .git
 
 MOSTRAR EL ESTADO 
---> git status     -> muestra los archivos que estan en el working directo
+	--> git status     -> muestra los archivos que estan en el working directo
 
 AGREGAR ARCHIVOS AL GIT
---> git add "nombrefile"
+	--> git add "nombrefile"
 
 BORRAR O DESHACER ARCHIVOS AGREGADOS
---> git rm --cached "nombrefile"
-	--> --cached --> Significa que esta en memoria ram, no guardado en la base de datos en sus cambios, basicamente le quitas el add 
+	--> git rm --cached "nombrefile"
+		--> --cached --> Significa que esta en memoria ram, no guardado en la base de datos en sus cambios, basicamente le quitas el add 
 
 QUITAR ARCHIVOS DEL STATE 
---> git reset carpeta/nombrefile.tipofile
+	--> git reset carpeta/nombrefile.tipofile
 
 AGREGAR ARCHIVOS QUE ESTEN LISTOS A GIT DE UNA SOLA VEZ
---> git add -A
+	--> git add -A
 
 AGREGAR ARCHIVOS DEL MISMO TIPO A GIT DE UNA SOLA VEZ
---> git add carpeta/*.css
+	--> git add carpeta/*.css
 
 BORRAR DEL WORKSTATION POR COMPLETO
---> git rm -f "namefile"
+	--> git rm -f "namefile"
 
 COMPROMETER LOS CAMBIO AL GIT 
---> git commit
-	--> -m "mensaje"
-	ej: git commit -m "Cualquier mensaje"
+	--> git commit
+		--> -m "mensaje"
+		ej: git commit -m "Cualquier mensaje"
 
 ABRIR ARCHIVOS DIRECTO DESDE EL GITBASH
---> code "namefile.tipofile"
-	--> Automaticamente se abre con visual studio dicho archivo 
+	--> code "namefile.tipofile"
+		--> Automaticamente se abre con visual studio dicho archivo 
 	
 MODIFICAR LA CONFIRMACION MAS RECIENTE
---> git commit --amend
+	--> git commit --amend
 	
 MOSTRAR LAS DIFERENCIAS ENTRE EL ANTEPENULTIMO ARCHIVO Y EL ULTIMO
---> git show "namefile.tipofile"
+	--> git show "namefile.tipofile"
 
 MOSTRAR LOS COMMITT HECHOS 
---> git log
+	--> git log
 
 DESHACER LOS CAMBIOS QUE FUERON HECHO EN ARCHIVOS QUE NO ESTEN EN EL STATING
---> git checkout -- namefile.tipofile
+	--> git checkout -- namefile.tipofile
 
 RESETEAR ARCHIVOS QUE YA FUEERON MANDADOS AL STATING AREA
---> git reset HEAD namefile.tipofile
-	--> devuele al estado el ultimo archivos afectado por un git add 
-	--> retrocede un commit y ahi deshacer cambion que ya no esten en stating
-		--> git checkout -- namefile.tipofile
+	--> git reset HEAD namefile.tipofile
+		--> devuele al estado el ultimo archivos afectado por un git add 
+		--> retrocede un commit y ahi deshacer cambion que ya no esten en stating
+			--> git checkout -- namefile.tipofile
 
+USO DE LOS COMMITS ------------------------------------------------------------------------------------------------------------------------------------------
 MOSTRAR ID DE LOS COMMIT SIN HASH
---> git log --oneline
-	--> concatenarlo
-		--> git log --oneline | cat
+	--> git log --oneline
+		--> concatenarlo
+			--> git log --oneline | cat
 		
 COMO ELIMINAR UN COMMIT (solo para local) No es seguro para grupos
 Y DEJAR LOS CAMBIOS EN EL STATE
 BORRA TODO LO QUE HICIMOS ANTES. CUIDADO
---> git reset "id.commit"
+	--> git reset "id.commit"
 
 ELIMINAR COMMIT CON HARD Y VACIAR STATES 
---> git reset --hard "id.comit"
+	--> git reset --hard "id.comit"
 
 ELIMINAR COMMIT CON SOFT Y DEJAR STATES
---> git reset --soft "id.comit"
+	--> git reset --soft "id.comit"
 
 VER DIFERENCIAS ENTRE COMMIT
---> git diff "id.comit" "id.commit"
+	--> git diff "id.comit" "id.commit"
 
 COMO REVERTIR UN COMMIT
---> git revert "id.commit"
-o --> git revert HEAD~1 (numero del comit)
+	--> git revert "id.commit"
+		o --> git revert HEAD~1 (numero del comit)
 
 ELIMINAR VARIOS COMMIT DE UNA SOLA ATACADA
---> git revert --no-commit HEAD~1
-Luego hacer reversion para continuar
-	--> git revert --continue
+	--> git revert --no-commit HEAD~1
+	Luego hacer reversion para continuar
+		--> git revert --continue
 
 COMO VER LOS COMIT EN ARDEN(ANTERIOR, ETC)
---> git diff HEAD~1 HEAD (1 indica el numero de comit anterior)
+	--> git diff HEAD~1 HEAD (1 indica el numero de comit anterior)
 
 VER PUNTEROS EN LOS QUE ESTAMOS PARADOS
---> git log --oneline --decorate
+	--> git log --oneline --decorate
 
+USO DE PULL Y PUSH ------------------------------------------------------------------------------------------------------------------------------------------
+TRAER LAS ACTUALIZACIONES Y COPIARLAS EN TU REPO LOCAL 
+	--> git pull origin master 
+	
 ENVIAR CAMBIOS A UN SERVIDOR REMOTO
---> git push
+	--> git push origin masgter
 
 TRAER LAS ACTUALIZACIONES DE UN SERVIDOR REMOTO
 pero no lo copia en tus archivos
---> git fetch
-Para fusionarlo hacemos merge
---> git merge
+	--> git fetch
 
-TRAER LAS ACTUALIZACIONES Y COPIARLAS
---> git pull
 
+USO DE RAMAS ---------------------------------------------------------------------------------------------------------------------------------------------------
 COMO CREAR, MODIFICAR Y ELIMINAR BRANCHES (RAMAS)
 VER LISTA DE RAMAS
---> git branch
+	--> git branch
 
 CREAR RAMA 
---> git branch "name-rama"
+	--> git branch "name-rama"
 
 CAMBIAR ENTRE RAMAS 
 Este comando es una fusión entre “git branch” y “git checkout”, y su funcionamiento es el siguiente:
-- Crea una rama llamada “name-rama”
-- Hace un checkout de la rama “name-rama”
---> git checkout "name-rama"
+	- Crea una rama llamada “name-rama”
+	- Hace un checkout de la rama “name-rama”
+		--> git checkout "name-rama"
 
 CREAR RAMA Y CAMBIARSE A ELLA
---> git checkout -b "name-rama"
+	--> git checkout -b "name-rama"
 
 CAMBIAR NOMBRE DE UNA RAMA 
---> git branch -m "name-rama-vieja" "name-rama-nueva"
+	--> git branch -m "name-rama-vieja" "name-rama-nueva"
 
 ELIMINAR RAMA
---> git branch -d "name-rama"
+	--> git branch -d "name-rama"
 
 ELIMINAR RAMA A LA FUERZA 
---> git branch -D "name-rama"
+	--> git branch -D "name-rama"
 
 VER PUNTEROS DE TODAS LAS RAMAS 
---> git log --oneline --decorate --all --graph
+	--> git log --oneline --decorate --all --graph
 
 COMO VER LAS RAMAS QUE EXISTEN Y CUALES HAN SIDO SU HISTORIA
---> git show-branch --all
+	--> git show-branch --all
 
 ABRIR EN SOFTWARA DE MANERA ULTRA VISUAL
---> gitk
+	--> gitk
 
 CONFIGURAR ALIAS PARA LOS CODIGOS
---> alias arbolito="git log --oneline --decorate --all --graph"
+	--> alias arbolito="git log --oneline --decorate --all --graph"
 
 COMO FUCIONAR LAS RAMAS 
---> git checkout master TENEMOS QUE POSICIONARNOS EN NUESTRA RAMA MASTER 
---> git merge "name.rama"
+	--> git checkout master TENEMOS QUE POSICIONARNOS EN NUESTRA RAMA MASTER 
+	--> git merge "name.rama"
 	LUEGO ELIMINAR LA RAMA SI NO LA NECESITAMOS OPCIONAL
-	--> git branch -d "name-rama"
+		--> git branch -d "name-rama"
 	
 CONFLICTOS CON LAS RAMAS 
 The “fatal: refusing to merge unrelated histories”
---> git pull origin master --allow-unrelated-histories
+	--> git pull origin master --allow-unrelated-histories
 
 MERGE CON CONLFICTOS
---> cuando se tiene archivos en conflictos se debe resolver de forma manual
-	--> Se deben resolver de forma manual, o escojer cual se deber quedar
-	UNA VEZ SE HACEN LOS CAMBIOS SE TIENEN QUE AGREGAR
-		--> git commit -am "Se solucionnal las ramas"
+	--> cuando se tiene archivos en conflictos se debe resolver de forma manual
+		--> Se deben resolver de forma manual, o escojer cual se deber quedar
+		UNA VEZ SE HACEN LOS CAMBIOS SE TIENEN QUE AGREGAR
+			--> git commit -am "Se solucionnal las ramas"
 
-ETIQUETAS EN GIT
+ETIQUETAS EN GIT---------------------------------------------------------------------------------------------------------------------------------------------
 AGREGARLAS
---> git tag -a v0.1 -m "mensaje"
---> git tag --> muestra el nombre de etiqueta
+	--> git tag -a v0.1 -m "mensaje"
+	--> git tag --> muestra el nombre de etiqueta
 	TRAER TODO DE TU REPOSITORIO
-	--> git pull origin master
+		--> git pull origin master
 	SUBIR TU TAG A TU REPOSITORIO
-	--> git push origin --tags
+		--> git push origin --tags
 	
 ELIMINAR LAS ETIQUETAS 
---> git tag -d "name-etiqueta"
+	--> git tag -d "name-etiqueta"
 
 ELIMINAR LAS ETIQUETAS DE MANERA ESPECIAL 
---> git push origin :refs/tags/dormido
+	--> git push origin :refs/tags/dormido
 
 COMO ENVIAR DIFERENTES RAMAS A TU REPOSITORIO
---> git push origin header
---> git push origin footer
-	--> ej: git push origin "namerama"
+	--> git push origin header
+	--> git push origin footer
+		--> ej: git push origin "namerama"
 
-USO DEL GIT STASH
+USO DEL GIT STASH -----------------------------------------------------------------------------------------------------------------------------------------
 guarda el trabajo actual del Staging en una lista diseñada para ser temporal llamada Stash, para que pueda ser recuperado en el futuro
---> git stash 
+	--> git stash 
 
 PONER UN MENSAJE EN EL STASH
---> git stash save "mensaje identificador del elemento del stashed"
+	--> git stash save "mensaje identificador del elemento del stashed"
 
 OBTENER ELEMENTOS DEL STASH 
 METODO POP: recupera y saca de la lista el ultimo estado del stashed y lo inserta en el staging area 
---> git stash pop
-	--> APLICACR CAMBIOS DE UN STASH ESPECIFICO
-		--> git stash pop stash@{<num_stash>}
+	--> git stash pop
+		--> APLICACR CAMBIOS DE UN STASH ESPECIFICO
+			--> git stash pop stash@{<num_stash>}
 	
 	-->RETOMAR LOS CAMBIOS DE UNA POSICION ESPECIFICA DEL STASH
 		--> git stash apply stash@{<num_stash>}
@@ -208,25 +210,51 @@ METODO POP: recupera y saca de la lista el ultimo estado del stashed y lo insert
 		--> git stash list
 
 CREAR RAMA CON EL STASH
---> git stash branch <namerama>
+	--> git stash branch <namerama>
 
 CREAR RAMA Y USAR UN STASH ESPECIFICO
---> git stash branch nombre_de_rama stash@{<num_stash>}
+	--> git stash branch nombre_de_rama stash@{<num_stash>}
 
 ELIMINAR ELEMENTOS DEL STASH
---> git stash drop
+	--> git stash drop
 
 ELIMINAR ELEMENTO DEL STASH CON EL INDICE
---> git stash drop stash@{<num_stash>}
+	--> git stash drop stash@{<num_stash>}
 
 ELIMINAR TODOS LOS ELEMENTOS DEL STASH
---> git stash clear
+	--> git stash clear
 
 ELIMINAR ARCHIVOS DUPLICADOS
---> git clean --dry-run
-	--> CONFIRMAR ARCHIVOS
-		--> git clean -f 
+	--> git clean --dry-run
+		--> CONFIRMAR ARCHIVOS
+			--> git clean -f 
 	-->ELIMINAR CARPETAS DUPLICADAS SE HACEN A MANO 
-	--> SI LA EXTENSION DE ARCHIVOS SE ENCUENTRAN EN EL IGNORE
-		--> ELIMINA A MANO 
-		
+		--> SI LA EXTENSION DE ARCHIVOS SE ENCUENTRAN EN EL IGNORE
+			--> ELIMINA A MANO 
+
+USO DE CHERRY-PICK --------------------------------------------------------------------------------------------------------------------------------------------
+	--> LO PRIMERO ES CREAR UN STASH
+		--> git stash 
+		--> CREAR UNA RAMA, MOVERSE Y AÑADIRLE EL STASH CREADO A LA RAMA 
+			--> git stash branch readme-mejorado
+		--> AÑADIRLE O MODIFICAR LOS CAMBIOS A LOS ARCHIVOS 
+		--> HACER COMMIT PREVIAMENTE CON SU MENSAJE 
+			--> git commit -am "Mensaje para sus modificacion de archvos"
+		--> UNA VEZ HECHO ESO, MOVERSE A LA RAMA PRINCIPAL MASTER O MAIN 
+			--> git checkout master 
+		SI NO SE SABE LA ETIQUETA QUE SE QUIEERE TRAER, CAMBIARSE A LA RAMA
+			--> ver la etiqueta del commit que se fue creado para traerlo al master 
+				--> git log --oneline (ESCOJER SU IDE)
+				--> MOVERSE NUEVAMENTE AL MASTER 
+					--> EJECUTAR EL COMANDO CHERRY-PICK
+						--> git cherry-pick <id.commit>
+			
+		LISTO YA SE EXTRAJO EL ID DEL COMMID EN SU RAMA PRINCIPAL 
+		UNIR RAMAS Y TRAER LOS OTROS CAMBIOS QUE FUERON HECHOS 
+			--> DESDE LA RAMA PRINCIPAL (MASTER)
+				--> git merge <namerama>
+			SI SALE CONFLICTOS SOLUCIONAR ERORRES Y LISTO 
+		HACER PULL Y LUEGO COMMIT AL MASTER 
+			--> git pull origin master
+				git push origin master 
+			
