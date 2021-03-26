@@ -44,3 +44,5 @@ ACTUALIZAR REPOSITORIO DEL DUEÑOO
 --> git pull origin master 
 	--> ver los cambios que hizo el colaborador
 		--> git log --stat
+		
+PROBANDO LOS COMANDO EN EL VIDEO 33
